@@ -22,10 +22,10 @@ jobs:
         run: pip install pandas scikit-learn
 
       - name: Validate dataset
-        run: python tourism_project/model_building/data_register.py
+        run: python /content/tourism_project/model_building/data_register.py
 
       - name: Prepare data
-        run: python tourism_project/model_building/prep.py
+        run: python /content/tourism_project/model_building/prep.py
 
       # Upload train.csv and test.csv
       - name: Upload prepared data
