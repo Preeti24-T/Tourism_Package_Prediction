@@ -1,9 +1,10 @@
+%%writefile tourism_project/model_building/data_register.py
 from pathlib import Path
 import pandas as pd
 import sys
 
-# Locate the dataset inside the repository
-ROOT_DIR = Path(__file__).resolve().parents[1]
+# Locate the dataset inside the repository relative to current working directory
+ROOT_DIR = Path.cwd() / "tourism_project"
 DATA_PATH = ROOT_DIR / "data" / "tourism.csv"
 
 # Expected dataset columns
