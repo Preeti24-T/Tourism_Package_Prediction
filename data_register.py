@@ -1,4 +1,3 @@
-%%writefile tourism_project/model_building/data_register.py
 from pathlib import Path
 import pandas as pd
 import sys
