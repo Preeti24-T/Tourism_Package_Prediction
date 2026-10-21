@@ -1,9 +1,14 @@
+%%writefile tourism_project/model_building/prep.py
 from pathlib import Path
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-# Project paths
-ROOT_DIR = Path(__file__).resolve().parents[1]
+# Project paths: use __file__ if running as a script, fallback to Path.cwd() in a notebook
+try:
+    ROOT_DIR = Path(__file__).resolve().parents[1]
+except NameError:
+    ROOT_DIR = Path.cwd() / "tourism_project"
+
 DATA_PATH = ROOT_DIR / "data" / "tourism.csv"
 OUTPUT_DIR = ROOT_DIR / "data" / "processed"
 
